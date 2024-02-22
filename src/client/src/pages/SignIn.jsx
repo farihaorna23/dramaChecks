@@ -1,8 +1,13 @@
 import "./SignIn.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMasksTheater } from "@fortawesome/free-solid-svg-icons";
 const SignIn = () => {
   return (
     <div class="center">
-      <h1 class="text-2xl text-center p-3 headline">dramaChecks</h1>
+      <h1 class="text-2xl text-center p-3 headline">
+        <FontAwesomeIcon icon={faMasksTheater} /> dramaChecks
+      </h1>
+
       <form class="space-y-6" action="#">
         <h5 class="text-xl text-black-500 text-center signIn-title">
           Sign in to our platform
