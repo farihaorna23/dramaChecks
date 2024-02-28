@@ -17,3 +17,8 @@
   display: flex;
   justify-content: space-between;
 }
+
+.link:hover {
+  background-color: #6d2932;
+  color: white;
+}
