@@ -2,7 +2,11 @@ import "./SignIn.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMasksTheater } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 const SignIn = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
     <div class="center">
       <h1 class="text-4xl md:text-2xl text-center p-3 headline">
@@ -24,6 +28,10 @@ const SignIn = () => {
             type="email"
             name="email"
             id="email"
+            value={email}
+            onChange={e => {
+              setEmail(e.target.value);
+            }}
             class="border border-gray-300 h-11 md:h-8 text-black-500 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-500"
             placeholder="name@company.com"
             required
@@ -40,6 +48,10 @@ const SignIn = () => {
             type="password"
             name="password"
             id="password"
+            value={password}
+            onChange={e => {
+              setPassword(e.target.value);
+            }}
             placeholder="••••••••"
             class="border border-gray-300 h-11 md:h-8 text-black-500 rounded-full block w-full p-2.5 dark:border-gray-500"
             required
